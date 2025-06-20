@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Calculator | By Rao Jatin</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body data-theme="dark">
+    <!-- Cosmic Background Animation -->
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <div class="calculator">
+        <!-- Theme Toggle -->
+        <div class="header">
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="made-by">Made by Rao Jatin</div>
+        </div>
+
+        <!-- Display -->
+        <div class="display">
+            <div class="history" id="history"></div>
+            <input type="text" id="display" readonly>
+        </div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button class="btn sci" onclick="addToDisplay('π')">π</button>
+            <button class="btn sci" onclick="addToDisplay('e')">e</button>
+            <button class="btn sci" onclick="addToDisplay('Math.sqrt(')">√</button>
+            <button class="btn sci" onclick="addToDisplay('**2')">x²</button>
+            <button class="btn op" onclick="clearDisplay()">AC</button>
+
+            <button class="btn sci" onclick="addToDisplay('Math.sin(')">sin</button>
+            <button class="btn sci" onclick="addToDisplay('Math.cos(')">cos</button>
+            <button class="btn sci" onclick="addToDisplay('Math.log(')">log</button>
+            <button class="btn sci" onclick="addToDisplay('Math.PI')">π</button>
+            <button class="btn op" onclick="backspace()"><i class="fas fa-backspace"></i></button>
+
+            <button class="btn num" onclick="addToDisplay('7')">7</button>
+            <button class="btn num" onclick="addToDisplay('8')">8</button>
+            <button class="btn num" onclick="addToDisplay('9')">9</button>
+            <button class="btn op" onclick="addToDisplay('/')">÷</button>
+            <button class="btn op" onclick="addToDisplay('%')">%</button>
+
+            <button class="btn num" onclick="addToDisplay('4')">4</button>
+            <button class="btn num" onclick="addToDisplay('5')">5</button>
+            <button class="btn num" onclick="addToDisplay('6')">6</button>
+            <button class="btn op" onclick="addToDisplay('*')">×</button>
+            <button class="btn op" onclick="addToDisplay('(')">(</button>
+
+            <button class="btn num" onclick="addToDisplay('1')">1</button>
+            <button class="btn num" onclick="addToDisplay('2')">2</button>
+            <button class="btn num" onclick="addToDisplay('3')">3</button>
+            <button class="btn op" onclick="addToDisplay('-')">-</button>
+            <button class="btn op" onclick="addToDisplay(')')">)</button>
+
+            <button class="btn num" onclick="addToDisplay('0')">0</button>
+            <button class="btn num" onclick="addToDisplay('.')">.</button>
+            <button class="btn op" onclick="calculate()"><i class="fas fa-equals"></i></button>
+            <button class="btn op" onclick="addToDisplay('+')">+</button>
+            <button class="btn op" onclick="addToDisplay('**')">^</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
